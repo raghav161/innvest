@@ -9,20 +9,19 @@ const Header = async ({ user }: { user: User }) => {
 
   return (
     <header className="sticky top-0 header">
-      <div className="container header-wrapper">
+      <div className="container header-wrapper md:pt-1!">
         <Link href="/">
           <Image
-            src="/assets/icons/logo.svg"
-            alt="Innvest logo"
-            width={140}
-            height={32}
-            className="h-8 w-auto cursor-pointer"
+            src="/assets/images/logo.png"
+            alt="Innvest"
+            width={340}
+            height={100}
+            className="h-12 md:h-16 w-18 md:w-28 cursor-pointer"
           />
         </Link>
         <nav className="hidden sm:block">
           <NavItems initialStocks={initialStocks} />
         </nav>
-
         <UserDropdown user={user} initialStocks={initialStocks} />
       </div>
     </header>
